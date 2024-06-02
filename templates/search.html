@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>Search Movies</h2>
+        <form method="get" class="form-inline">
+            <input type="text" name="query" class="form-control mr-2" placeholder="Search for movies..." required>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        {% if movies %}
+            <h3 class="mt-4">Results:</h3>
+            <ul class="list-group">
+                {% for movie in movies %}
+                    <li class="list-group-item">{{ movie.Title }} ({{ movie.Year }})</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Movie Library</h1>
+    <p class="lead">Search and manage your favorite movies.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'search_movies' %}" role="button">Search Movies</a>
+</div>
+{% endblock %}
